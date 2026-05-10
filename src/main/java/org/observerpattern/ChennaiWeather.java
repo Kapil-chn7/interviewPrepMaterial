@@ -1,0 +1,21 @@
+package org.observerpattern;
+
+public class ChennaiWeather implements Weather{
+
+    private final String location;
+
+
+
+    public ChennaiWeather( String location) {
+
+        this.location = location;
+    }
+
+
+    @Override
+    public void update(int temperature) {
+        String message = "Observer is from this "+location+" : and the updated values are "+temperature;
+        System.out.println(message);
+
+    }
+}
